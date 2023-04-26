@@ -1,0 +1,17 @@
+<canvas id="imgcanvas" width="500" height="500">
+    <script>
+        window.onload = function() {
+            const canvas = document.querySelector('#imgcanvas');
+            const ctx = canvas.getContext('2d');
+
+            const img = new Image();
+            img.src = 'https://mercy34mercy.github.io/storage//qiita.webp';
+            img.crossOrigin = "anonymous";
+            img.onload = function() {
+                ctx.drawImage(img, 0, 0);
+                const dataURL = canvas.toDataURL();
+                console.log(dataURL)
+            }
+        }
+    </script>
+</canvas>

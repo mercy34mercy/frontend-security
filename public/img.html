@@ -1,0 +1,9 @@
+<img id="sampleImage"  src="https://mercy34mercy.github.io/storage//qiita.webp" crossorigin>
+<script>
+    const img = document.querySelector('#sampleImage');
+    img.onload = function() {
+        ctx.drawImage(img, 0, 0);
+        const dataURL = canvas.toDataURL();
+        console.log(dataURL)
+    }
+</script>
